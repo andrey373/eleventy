@@ -1,0 +1,32 @@
+{% block content %}
+    <div class="contact">
+        <div class="map">
+            <iframe class="map_frame" src="{{map | url}}" loading="lazy"></iframe>
+
+            <div class="overlay">
+                <div class="container">
+                    <div class="overlay_inner">
+                        <h2 class="contact_title">{{contactTitle}}</h2>
+                        
+                        <div class="btn_contact_box">
+                            <button class="btn_contact_inner" type="button">Show on map</button>
+                        </div>
+                        <div class="contact_info_block">
+                            <ul class="info_list address_inf">
+                                <li class="info_item">{{addressInfo}}</li>
+                            </ul>
+                            <ul class="info_list phone_inf">
+                                <li class="info_item">{{tel}}</li>
+                                <li class="info_item">{{tel_2}}</li>
+                            </ul>
+                            <ul class="info_list email_inf">
+                                <li class="info_item">{{emailInfo}}</li>
+                                <li class="info_item">{{emailInfo_2}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

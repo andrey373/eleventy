@@ -1,0 +1,21 @@
+
+{% block content %}
+    <div class="features">
+        <div class="container">
+            <div class="features_block">
+                {% for item in collections.feature %}
+                    <div class="features_item">
+                        <div class="fs_item_icon">
+                            <img class="fs_item_img" src="{{item.data.icon}}" alt="icon">
+                        </div>
+                        <p class="features_text">{{item.data.description}}</p>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <p class="features_desc">
+                Choose really reliable equipment from «Zebra» with full support from the dealer!
+            </p>
+        </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% block content %}
+    <section class="advantages">
+        <div class="container">
+            <h2 class="title_advantage">{{titleAdvantages}}</h2>
+
+            <div class="advantage_content">
+                {% for item in collections.advantage %}
+                    <div class="advantage_item">
+                        <div class="advant_img">
+                            <img src="{{item.data.iconItem}}" alt="icon">
+                        </div>
+                        <h3 class="advant_title">{{item.data.titleItem}}</h3>
+                        <p class="advant_text">{{item.data.advantText}}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
