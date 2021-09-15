@@ -13,7 +13,13 @@
 
                             <h3 class="customer_name">{{item.data.customerName}}</h3>
                             <p class="customer_prof">{{item.data.profession}}</p>
-                            <p class="customer_desc">{{item.data.desc}}</p>
+                            <div class="customer_desc_block">
+                                <div class="viewport">
+                                    <div class="content-box">
+                                        <p class="customer_desc content-list">{{item.data.desc}}</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     {% endfor %}
                 </div>

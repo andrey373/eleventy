@@ -3,5 +3,5 @@ icon: './assets/img/icons/customer003.png'
 customerName: 'Anne Gregory'
 profession: 'Director of the «MountCirce»'
 desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the 1500s, when an unknown printer took
-a galley of type and scrambled.'
+a galley of type and scrambled.' 
 ---

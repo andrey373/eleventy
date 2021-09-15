@@ -17,6 +17,10 @@ body{
     padding: 0;
 }
 
+body.noscroll{
+    overflow: hidden;
+}
+
 input[type="submit"],
 input[type="button"],
 input[type="image"],
@@ -522,11 +526,62 @@ source{
     margin-bottom: 35px;
 }
 
+.customer_desc_block{
+    position: relative;
+    height: 195px;
+    width: 100%;
+}
+
+.viewport{
+    overflow: hidden;
+    position: absolute;
+    left: 19px;
+    right: 9px;
+    top: 7px;
+    bottom: 7px;
+}
+
+.content-box{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: -17px;
+    overflow-y: scroll;
+}
+
 .customer_desc{
     font-size: 14px;
     line-height: 24px;
-    height: 195px;
-    overflow: auto;
+    padding-right: 25px;
+    margin: 0;
+    user-select: none;
+}
+
+.scrollbar {
+    /* opacity: 0; */
+    right: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: rgba(2, 0, 36, .1);
+    transition: opacity .3s;
+}
+
+.scrollbar.scrollbar--active {
+    opacity: 1;
+}
+
+
+.scroller {
+    left: 0;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom, #3011e2, #00ceff);;
+    cursor: pointer;
+}
+
+.scrollbar, .scroller {
+    width: 5px;
+    position: absolute;
+    top: 0;
 }
 
 .customer_nav{
@@ -605,6 +660,7 @@ source{
                       linear-gradient(to left top, #3011e2, #00ceff);
     background-origin: border-box;
     background-clip: content-box, border-box;
+    overflow: hidden;
 }
 
 .form_block .input_item{
@@ -621,12 +677,58 @@ source{
     box-shadow: inset 5px 5px 10px 3px rgba(58, 58, 58, .2);
 }
 
+.modal_overlay{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 8, 255, .7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 30px 15px;
+}
+
+.modal_overlay.open{
+    display: flex;
+}
+
+.modal_form{
+    margin: auto;
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal_form_text{
+    font-family: 'Montserrat-middle', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.btn_modal{
+    text-transform: uppercase;
+    width: 120px;
+    height: 30px;
+    margin-top: 40px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    background-image: linear-gradient(white, white), 
+                      linear-gradient(to left top, #3011e2, #00ceff);
+    background-origin: border-box;
+    background-clip: content-box, border-box;  
+}
 
 /* style for block contact */
 
 
 .contact{
     position: relative;
+}
+
+.map{
+    line-height: 0;
 }
 
 .map_frame{
@@ -642,6 +744,10 @@ source{
     top: 0;
     left: 0;
     background-color: rgba(0, 8, 255, .7);
+}
+
+.overlay.hide{
+    display: none;
 }
 
 .overlay_inner{
@@ -664,6 +770,7 @@ source{
     background-color: #fff;
     border-radius: 30px;
     padding: 20px 50px;  
+    cursor: pointer;
 }
 
 .btn_contact_inner{

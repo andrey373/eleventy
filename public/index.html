@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./css/owl.theme.default.css" type="text/css" media="all">
     <link rel="stylesheet" href="./css/style.css" type="text/css" media="all">
     <link rel="stylesheet" href="./css/responsive.css" type="text/css" media="all">
+    
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 
@@ -26,7 +28,7 @@
             </a>
 
             <div class="btn_contact_wrap">
-                <a class="btn_contact" href="#contactPage">Contact us</a>       
+                <a class="btn_contact" href="#anchorContactPage">Contact us</a>       
             </div>
         </div>
     
@@ -359,7 +361,13 @@
 
                             <h3 class="customer_name">Anne Gregory</h3>
                             <p class="customer_prof">Director of the «MountCirce»</p>
-                            <p class="customer_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+                            <div class="customer_desc_block">
+                                <div class="viewport">
+                                    <div class="content-box">
+                                        <p class="customer_desc content-list">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     
                         <div class="customer_item">
@@ -369,7 +377,13 @@
 
                             <h3 class="customer_name">Joseph Knight</h3>
                             <p class="customer_prof">Director of the «Universal Pic.»</p>
-                            <p class="customer_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <div class="customer_desc_block">
+                                <div class="viewport">
+                                    <div class="content-box">
+                                        <p class="customer_desc content-list">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     
                         <div class="customer_item">
@@ -379,7 +393,13 @@
 
                             <h3 class="customer_name">Anne Gregory</h3>
                             <p class="customer_prof">Director of the «MountCirce»</p>
-                            <p class="customer_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+                            <div class="customer_desc_block">
+                                <div class="viewport">
+                                    <div class="content-box">
+                                        <p class="customer_desc content-list">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     
                         <div class="customer_item">
@@ -389,7 +409,13 @@
 
                             <h3 class="customer_name">Rosaline Greene</h3>
                             <p class="customer_prof">Director of the «LifeStyle Co.»</p>
-                            <p class="customer_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard</p>
+                            <div class="customer_desc_block">
+                                <div class="viewport">
+                                    <div class="content-box">
+                                        <p class="customer_desc content-list">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry s standard</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     
                 </div>
@@ -437,20 +463,29 @@
     
     <div class="contact_form">
         <div class="container">
-            <form class="form_block" action="#" method="post">
+            <form class="form_block" action="#" method="post" name="formCallback">
                 <label class="form_label">
-                    <input class="input_item input_name" type="text" name="name" placeholder="Your Name">
+                    <input class="input_item input_name" type="text" name="name" placeholder="Your Name" required>
                 </label>
                 <label class="form_label">
-                    <input class="input_item input_email" type="email" name="email" placeholder="Your Email">
+                    <input class="input_item input_email" type="email" name="email" placeholder="Your Email" required>
                 </label>
                 <input class="input_sub" type="submit" value="Submit">
             </form>
+
+
+            <div class="modal_overlay">
+                <div class="modal_form">
+                    <p class="modal_form_text">Thank <span class="textFromInput"></span> for signing up!</p>
+
+                    <button class="btn_modal" type="button">ok</button>
+                </div>
+            </div>
         </div>
     </div>
 
     
-    <div class="contact">
+    <div class="contact" id="anchorContactPage">
         <div class="map">
             <iframe class="map_frame" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1573.0306226104435!2d35.048834888693996!3d48.465899300401055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1631034226234!5m2!1sru!2sua" loading="lazy"></iframe>
 
@@ -519,8 +554,14 @@
     </div>
 </footer>
 
+    <!-- Include the script that builds the page and powers Netlify CMS -->
+    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
     <script src="./assets/js/jquery.js"></script>
-    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script> 
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/scrollSlowly.js"></script>
+    <script src="./assets/js/formSet.js"></script>
+    <script src="./assets/js/mapSet.js"></script>
+    <script src="./assets/js/scrollBar.js"></script>
 </body>
 </html>
